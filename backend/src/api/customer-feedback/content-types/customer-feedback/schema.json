@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customer_feedbacks",
+  "info": {
+    "singularName": "customer-feedback",
+    "pluralName": "customer-feedbacks",
+    "displayName": "Customer Feedback"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Feedback": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
