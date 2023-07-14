@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="my-3">
       <nav>
-        <ul className="flex flex-row justify-between items-center text-gris_claro">
+        <ul className="flex flex-row justify-between items-center text-lightGris">
           <li>
             <a href="">Sobre</a>
           </li>
