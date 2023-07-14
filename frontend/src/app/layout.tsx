@@ -1,23 +1,39 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import Header from '@components/Header'
+import "./globals.css";
+import type { Metadata } from "next";
+import Navbar from "@/views/Navbar";
+import { Libre_Franklin, Josefin_Sans } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: 'VibeFit',
-  description: 'VibeFit - A melhor comida fitness do Brasil',
-}
+  title: "VibeFit",
+  description: "VibeFit - A melhor comida fitness do Brasil",
+};
+
+const libre = Libre_Franklin({
+  display: "swap",
+  subsets: ["latin-ext"],
+  variable: "--font-libre",
+});
+
+const josefin = Josefin_Sans({
+  display: "swap",
+  subsets: ["latin-ext"],
+  variable: "--font-josefin",
+});
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="bg-branco font-Libre Franklin mx-20">
-        <Header />
+    <html
+      lang="pt-br"
+      className={`bg-white ${libre.variable} ${josefin.variable}`}
+    >
+      <body className="bg-white font-sans mx-20">
+        <Navbar />
         {children}
-        </body>
+      </body>
     </html>
-  )
+  );
 }

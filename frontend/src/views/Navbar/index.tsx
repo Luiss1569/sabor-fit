@@ -1,9 +1,9 @@
 import imgLogo from "@img/Logo.png";
 import Image from "next/image";
 
-export default function Header() {
+export default function Navbar() {
   return (
-    <header className="my-3">
+    <header className="h-20 my-3">
       <nav>
         <ul className="flex flex-row justify-between items-center text-lightGris">
           <li>

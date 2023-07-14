@@ -1,9 +1,9 @@
-import Image from 'next/image'
+import Carrossel from "@/views/Carrossel";
 
 export default function Home() {
   return (
-    <main>
-      
-    </main>
-  )
+    <div>
+      <Carrossel />
+    </div>
+  );
 }
