@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <header className="h-20 my-3">
+    <header className="h-20 my-3 mx-20">
       <nav>
         <ul className="flex flex-row justify-between items-center text-lightGris">
           <li>
