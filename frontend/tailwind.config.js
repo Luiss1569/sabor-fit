@@ -16,6 +16,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-libre)"],
         mono: ["var(--font-josefin)"],
+        title: ["var(--font-rancho)"],
       },
       colors: {
         " gris-light": "#4A4A4A",

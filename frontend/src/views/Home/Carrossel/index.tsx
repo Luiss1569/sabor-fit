@@ -10,7 +10,7 @@ export default function Carrossel() {
           Comida <strong className="text-primary">saudável</strong> também pode
           ter <strong className="text-secondary">sabor</strong>.
         </h1>
-        <p className="text-lg">
+        <p className="text-lg lg:text-xl">
           Transforme seu corpo e sua vida com os sabores irresistíveis dos
           nossos pratos.
         </p>

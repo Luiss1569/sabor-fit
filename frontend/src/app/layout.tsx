@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Navbar from "@/views/Navbar";
-import { Libre_Franklin, Josefin_Sans } from "next/font/google";
+import Navbar from "@/views/Home/Navbar";
+import { Libre_Franklin, Josefin_Sans, Rancho } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "VibeFit",
@@ -20,6 +20,13 @@ const josefin = Josefin_Sans({
   variable: "--font-josefin",
 });
 
+const rancho = Rancho({
+  weight: "400",
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-rancho",
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -28,9 +35,9 @@ export default function RootLayout({
   return (
     <html
       lang="pt-br"
-      className={`bg-white ${libre.variable} ${josefin.variable}`}
+      className={`bg-white ${libre.variable} ${josefin.variable} ${rancho.variable}`}
     >
-      <body className="bg-white font-sans lg:mx-20 mx-5">
+      <body className="bg-white font-sans">
         <Navbar />
         {children}
       </body>
