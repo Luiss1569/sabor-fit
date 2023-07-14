@@ -16,7 +16,7 @@ export default function Carrossel() {
         </p>
         <Button variant="secondary">Veja o cardápio</Button>
       </div>
-      <div className="w-full mt-5 lg:mt-0 lg:w-2/3">
+      <div className="flex justify-center w-full mt-5 lg:mt-0 lg:w-2/3 m-auto">
         <Image src={cmgCarrossel} alt="carrossel" />
       </div>
     </section>
