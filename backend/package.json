@@ -7,7 +7,9 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "prebuild": "cd src/plugins/example && npm run build"
+
   },
   "devDependencies": {},
   "dependencies": {
@@ -26,5 +28,8 @@
     "node": ">=14.19.1 <=18.x.x",
     "npm": ">=6.0.0"
   },
+  "workspaces":[
+    "./plugins/example"
+  ],
   "license": "MIT"
 }
