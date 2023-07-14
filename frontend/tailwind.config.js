@@ -1,23 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     colors:{
-      gris_claro: '#4A4A4A',
-      branco: '#ffffff',
-      quase_negro: '#121212',
-      laranga: '#FF6700',
-      verde_claro: '#88cc00',
-      gris_escuro:'#333333',
-      negro:'#000000',
-      azul_claro: '#55ACEE',
-      azul: '#0A66C2',
+      gris_lightGris: '#4A4A4A',
+      white: '#ffffff',
+      lightDark: '#121212',
+      orange: '#FF6700',
+      lightGreen: '#88cc00',
+      darkGris:'#333333',
+      dark:'#000000',
+      lightBlues: '#55ACEE',
+      blue: '#0A66C2',
       gris: '#D9D9D9',
-      quase_vermelho: '#F24E1E'
+      lightRed: '#F24E1E'
     },
     fontFamily:{
       "Libre Franklin":['Libre Franklin', 'sans-serif']
