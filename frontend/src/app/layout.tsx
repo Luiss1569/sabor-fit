@@ -30,7 +30,7 @@ export default function RootLayout({
       lang="pt-br"
       className={`bg-white ${libre.variable} ${josefin.variable}`}
     >
-      <body className="bg-white font-sans mx-20">
+      <body className="bg-white font-sans lg:mx-20 mx-5">
         <Navbar />
         {children}
       </body>
