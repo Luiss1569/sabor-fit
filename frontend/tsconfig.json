@@ -25,6 +25,7 @@
       "@views/*": ["./src/views/*"],
       "@pages/*": ["./src/pages/*"],
       "@img/*": ["./src/assets/img/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
 
     }
   },
