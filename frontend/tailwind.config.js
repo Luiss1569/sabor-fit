@@ -19,7 +19,7 @@ module.exports = {
         title: ["var(--font-rancho)"],
       },
       colors: {
-        " gris-light": "#4A4A4A",
+        "gris-light": "#4A4A4A",
         primary: "#88CC00",
         "primary-light": "#acdb4d",
         "primary-dark": "#6da300",

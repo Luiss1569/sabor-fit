@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "@/views/Home/Navbar";
 import { Libre_Franklin, Josefin_Sans, Rancho } from "next/font/google";
+import Footer from "@/views/Home/Footer";
 
 export const metadata: Metadata = {
   title: "VibeFit",
@@ -40,6 +41,7 @@ export default function RootLayout({
       <body className="bg-white font-sans">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
