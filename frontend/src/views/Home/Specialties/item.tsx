@@ -1,6 +1,7 @@
 import Button from "@/components/Button";
 import Product from "@/interfaces/product";
 import Image from "next/image";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 const STRAPI_URI = process.env.STRAPI_URI;
 
@@ -22,7 +23,7 @@ export default async function Specialty({ specialty, index }: SpecialtyProps) {
         </h3>
         <div className="w-full h-[1px] shadow-lg bg-gray-400 shadow-lg"></div>
         <p className="text-sm mt-5 mb-5 md:text-md">
-          {specialty.attributes.Details}
+          <ReactMarkdown>{specialty.attributes.Details}</ReactMarkdown>
         </p>
         <div className="flex flex-row justify-between items-center mb-5">
           <p className="text-sm font-bold text-xl md:text-2xl">
@@ -39,9 +40,12 @@ export default async function Specialty({ specialty, index }: SpecialtyProps) {
         }`}
       >
         <div
-          className="w-full h-[25rem] md:h-[30rem] bg-cover bg-end bg-no-repeat bg-auto"
+          className="w-full h-[25rem] md:h-[30rem] bg-cover bg-end bg-no-repeat bg-auto rounded-2xl"
           style={{
             background: `url(${STRAPI_URI}${specialty.attributes.Image.data.attributes.url})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         />
       </div>

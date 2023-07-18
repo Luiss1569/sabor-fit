@@ -12,7 +12,31 @@ const headers = new Headers({
 
 export async function getApiSpecialties(): Promise<Product[]> {
   const response = await fetch(
-    `${BASE_URL}/produtos?filters[emphasis]=true&populate=*`,
+    `${BASE_URL}/produtos?filters[Emphasis]=true&populate=*&pagination[limit]=3`,
+    {
+      method: "GET",
+      headers,
+    }
+  ).then((res) => res.json());
+
+  return response.data;
+}
+
+export async function getApiRecentProducts(): Promise<Product[]> {
+  const response = await fetch(
+    `${BASE_URL}/produtos?populate=*&pagination[limit]=4&sort=createdAt:desc`,
+    {
+      method: "GET",
+      headers,
+    }
+  ).then((res) => res.json());
+
+  return response.data;
+}
+
+export async function getApiTopSellingProducts(): Promise<Product[]> {
+  const response = await fetch(
+    `${BASE_URL}/produtos?populate=*&pagination[limit]=4&sort=Price:desc`,
     {
       method: "GET",
       headers,
