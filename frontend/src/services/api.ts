@@ -12,7 +12,7 @@ const headers = new Headers({
 
 export async function getApiSpecialties(): Promise<Product[]> {
   const response = await fetch(
-    `${BASE_URL}/produtos?filters[emphasis]=true&populate=*&pagination[limit]=3`,
+    `${BASE_URL}/produtos?filters[Emphasis]=true&populate=*&pagination[limit]=3`,
     {
       method: "GET",
       headers,

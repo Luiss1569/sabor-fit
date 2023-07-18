@@ -44,6 +44,8 @@ export default async function Specialty({ specialty, index }: SpecialtyProps) {
           style={{
             background: `url(${STRAPI_URI}${specialty.attributes.Image.data.attributes.url})`,
             backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         />
       </div>

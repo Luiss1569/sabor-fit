@@ -2,8 +2,6 @@ import { getApiSpecialties } from "@/services/api";
 import Title from "@components/Title";
 import Specialty from "./item";
 
-export const revalidate = 60;
-
 async function getSpecialties() {
   const specialties = await getApiSpecialties();
 

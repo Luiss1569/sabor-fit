@@ -14,10 +14,10 @@ interface ItemProps extends React.HTMLAttributes<HTMLDivElement> {
 export const Item = ({ product, ...props }: ItemProps) => {
   return (
     <div
-      className="flex flex-col justify-center items-center md:flex-row md:justify-between md:flex-1 max-w-[20rem] md:max-w-[30rem] p-2 md:p-10 gap-1"
+      className="flex flex-col justify-center items-center md:flex-row md:justify-between md:flex-1 max-w-[20rem] md:max-w-[30rem] p-2 px-2 py-3 md:p-10 gap-1"
       {...props}
     >
-      <div className="flex flex-row justify-center items-center">
+      <div className="flex flex-row justify-center">
         <div
           id="avatar"
           className="w-16 h-16 rounded-full bg-gray-300"
@@ -31,11 +31,11 @@ export const Item = ({ product, ...props }: ItemProps) => {
       </div>
 
       <div>
-        <div className="flex flex-row justify-center items-center">
-          <h6 className="text-lg font-bold">{product.attributes.Title}</h6>
+        <div className="flex flex-row justify-center items-baseline">
+          <h6 className="text-md md:text-lg font-semibold w-full">{product.attributes.Title}</h6>
           <p className="text-md">R${product.attributes.Price}</p>
         </div>
-        <p className="text-ellipsis overflow-hidden">
+        <p className="text-sm text-ellipsis overflow-hidden">
           <ReactMarkdown>
             {product.attributes.Details.substring(0, 45) + "..."}
           </ReactMarkdown>
@@ -48,7 +48,7 @@ export const Item = ({ product, ...props }: ItemProps) => {
 export const Container = ({ children, ...props }: ContainerProps) => {
   return (
     <div
-      className="flex justify-center items-center md:justify-between md:flex-1 divide-x-2 divide-gray-400"
+      className="flex flex-col justify-center items-center md:justify-between md:flex-1 divide-y-2 divide-gray-400"
       {...props}
     >
       {children}
