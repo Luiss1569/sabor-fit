@@ -30,8 +30,10 @@ const rancho = Rancho({
 
 export default function RootLayout({
   children,
+  modal,
 }: {
   children: React.ReactNode;
+  modal?: React.ReactNode;
 }) {
   return (
     <html
@@ -42,6 +44,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        {modal}
       </body>
     </html>
   );

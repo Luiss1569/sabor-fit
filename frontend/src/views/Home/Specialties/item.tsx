@@ -1,6 +1,5 @@
-import Button from "@/components/Button";
+import { Link } from "@/components/Button";
 import Product from "@/interfaces/product";
-import Image from "next/image";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 const STRAPI_URI = process.env.STRAPI_URI;
@@ -29,9 +28,13 @@ export default async function Specialty({ specialty, index }: SpecialtyProps) {
           <p className="text-sm font-bold text-xl md:text-2xl">
             R$ {specialty.attributes.Price}
           </p>
-          <Button variant="primary" className="px-4 py-3">
+          <Link
+            variant="primary"
+            className="px-4 py-3"
+            href={`/product/${specialty.attributes.slug}`}
+          >
             <p className="text-sm md:text-md">Ver Mais</p>
-          </Button>
+          </Link>
         </div>
       </div>
       <div

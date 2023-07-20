@@ -45,3 +45,15 @@ export async function getApiTopSellingProducts(): Promise<Product[]> {
 
   return response.data;
 }
+
+export async function getApiProductBySlug(slug: string): Promise<Product> {
+  const response = await fetch(
+    `${BASE_URL}/produtos/?filters[Slug]=${slug}&populate=*`,
+    {
+      method: "GET",
+      headers,
+    }
+  ).then((res) => res.json());
+
+  return response.data.at(0);
+}
