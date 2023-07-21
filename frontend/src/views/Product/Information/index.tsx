@@ -20,7 +20,7 @@ export default function Information({ product }: InformationProps) {
     >
       <div className={`w-full md:w-1/3 flex md:justify-start`}>
         <div
-          className="w-full h-[25rem] md:h-[30rem] bg-cover bg-end bg-no-repeat bg-auto rounded-2xl"
+          className="w-full h-[15rem] md:h-[30rem] bg-cover bg-end bg-no-repeat bg-auto rounded-2xl"
           style={{
             background: `url(${STRAPI_URI}${product.attributes.Image.data.attributes.url})`,
             backgroundRepeat: "no-repeat",
