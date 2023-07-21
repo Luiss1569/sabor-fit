@@ -1,46 +1,14 @@
-// import { getApiCustomersFeedbacks} from "@/services/api";
-// import Item from "./item";
-// import Title from "@components/Title"
-// import { useState } from "react";
-
-// async function getCustomerFeedbacks() {
-//     const customerFeedback = await getApiCustomersFeedbacks();
-  
-//     return customerFeedback || [];
-//   }
-
-// export default async function Testemunhas() {
-//     const customerFeedback = await getCustomerFeedbacks();
-//     const [currentFeedback,setCurrentFeedback] = useState(0);
-//     const changeFeedback = (newFeedback:number) => {
-//         setCurrentFeedback(newFeedback);
-//       };
-
-//     return(
-//         <section>
-//             <Title label="Testemunhas">Consumidor Feliz</Title>
-//             <div>
-//                 <Item customerFeedback={customerFeedback[currentFeedback]}/>
-//             </div>
-//             <div>
-//                 {customerFeedback.map((_,index)=>(
-//                     <div key={index} className={`w-4 h-4 mx-1 rounded-full cursor-pointer ${index===currentFeedback? 'bg-black':'bg-white'}`} onClick={()=>changeFeedback(index)}>
-                        
-//                     </div>
-//                 ))}
-//             </div>
-//         </section>
-//     )
-// }
-"use client"
-import { useState, useEffect } from 'react';
+"use client";
+import { useState, useEffect } from "react";
 import { getApiCustomersFeedbacks } from "@/services/api";
 import Item from "./item";
 import Title from "@components/Title";
 import CustomerFeedback from "@/interfaces/customerFeedback";
 
 export default function Testemunhas() {
-  const [customerFeedback, setCustomerFeedback] = useState<CustomerFeedback[]>([]);
+  const [customerFeedback, setCustomerFeedback] = useState<CustomerFeedback[]>(
+    []
+  );
   const [currentFeedback, setCurrentFeedback] = useState(0);
 
   useEffect(() => {
@@ -54,32 +22,34 @@ export default function Testemunhas() {
 
   const changeFeedback = (newFeedback: number) => {
     if (newFeedback >= 0 && newFeedback < customerFeedback.length) {
-      console.log(newFeedback)
       setCurrentFeedback(newFeedback);
     }
   };
-  
-
-  console.log("customerFeedback:", customerFeedback);
 
   return (
     <section>
       <Title label="Testemunhas">Consumidor Feliz</Title>
-      <div>
-        {customerFeedback[currentFeedback] ? (
-          <Item customerFeedback={customerFeedback[currentFeedback]} />
-        ) : (
-          <p>Cargando datos...</p>
-        )}
-      </div>
-      <div>
-        {customerFeedback.map((_, index) => (
-          <div
-            key={index}
-            className={`w-4 h-4 mx-1 rounded-full cursor-pointer ${index === currentFeedback ? 'bg-black' : 'bg-blue-600'}`}
-            onClick={() => changeFeedback(index)}
-          />
-        ))}
+      <div className=" bg-background-testemunhas md:bg-background-testemunhas-tela-grande bg-cover bg-center w-full p-5">
+        <div className="flex flex-col gap-4">
+          <div>
+            {customerFeedback[currentFeedback] ? (
+              <Item customerFeedback={customerFeedback[currentFeedback]} />
+            ) : (
+              <p>Cargando dados...</p>
+            )}
+          </div>
+          <div className="flex justify-center gap-4">
+            {customerFeedback.slice(0,5).map((_, index) => (
+              <div
+                key={index}
+                className={`w-4 h-4 rounded-full cursor-pointer ${
+                  index === currentFeedback ? "bg-none border-2 border-white" : "bg-white"
+                }`}
+                onClick={() => changeFeedback(index)}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

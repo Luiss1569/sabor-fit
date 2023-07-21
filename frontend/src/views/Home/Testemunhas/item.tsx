@@ -1,5 +1,5 @@
 import CustomerFeedback from "@/interfaces/customerFeedback";
-import { FaQuoteRight } from "react-icons/fa";
+import { FaQuoteLeft } from "react-icons/fa";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 const STRAPI_URI = process.env.STRAPI_URI;
@@ -10,8 +10,8 @@ interface ItemProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export const Item = ({customerFeedback}: ItemProps) => {
   return (
-    <div className="flex flex-col gap-4 bg-black/60 rounded-md md:rounded-none">
-      <FaQuoteRight />
+    <div className="flex flex-col text-white items-center gap-4 md:bg-black/60 md:p-4 md:pb-6 md:mt-4 rounded-xl">
+      <FaQuoteLeft className="w-7 h-7"/>
       <div>{customerFeedback.attributes.Feedback}</div>
       <div>
         <ReactMarkdown>{customerFeedback.attributes.Name}</ReactMarkdown>

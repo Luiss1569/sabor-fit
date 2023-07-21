@@ -12,6 +12,8 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "background-testemunhas": "url('../assets/img/BackgroundTestemunhas.svg')",
+        "background-testemunhas-tela-grande": "url('../assets/img/BackgroundTestemunhasTelaGrande.svg')",
       },
       fontFamily: {
         sans: ["var(--font-libre)"],
