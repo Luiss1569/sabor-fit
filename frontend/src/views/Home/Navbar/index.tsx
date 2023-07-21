@@ -9,6 +9,7 @@ import {
   FaBars,
   FaFacebook,
 } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -20,7 +21,9 @@ export default function Navbar() {
       <nav className="flex justify-between items-center text-lightGris">
         <div className="flex flex-col w-full md:hidden">
           <div className="flex px-10 justify-between w-full">
-            <Image src={imgLogo} alt="Logo" />
+            <Link href="/">
+              <Image src={imgLogo} alt="Logo" />
+            </Link>
             {isMenuOpen ? (
               <button onClick={toggleMenu}>
                 <FaTimes />
@@ -40,16 +43,16 @@ export default function Navbar() {
           >
             <ul className="flex flex-col">
               <li>
-                <a href="">Sobre</a>
+                <Link href="/about">Sobre</Link>
               </li>
               <li>
-                <a href="">Produtos</a>
+                <Link href="/product">Produtos</Link>
               </li>
               <li>
-                <a href="">Contato</a>
+                <a href="#contact">Contato</a>
               </li>
               <li>
-                <a href="">Quem somos</a>
+                <a href="#about">Quem somos</a>
               </li>
             </ul>
             <div className="flex gap-4 justify-start w-full">
@@ -67,19 +70,21 @@ export default function Navbar() {
         </div>
         <ul className="md:flex justify-between items-center hidden w-full mx-20">
           <li>
-            <a href="">Sobre</a>
+            <Link href="/about">Sobre</Link>
           </li>
           <li>
-            <a href="">Produtos</a>
+            <Link href="/product">Produtos</Link>
           </li>
           <li>
-            <Image src={imgLogo} alt="Logo" />
+            <Link href="/">
+              <Image src={imgLogo} alt="Logo" />
+            </Link>
           </li>
           <li>
-            <a href="">Contato</a>
+            <a href="#contact">Contato</a>
           </li>
           <li>
-            <a href="">Quem somos</a>
+            <a href="#about">Quem somos</a>
           </li>
         </ul>
       </nav>
