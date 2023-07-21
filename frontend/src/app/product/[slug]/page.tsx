@@ -1,6 +1,6 @@
 import { getApiProductBySlug } from "@/services/api";
 import Information from "@/views/Product/Information";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 
 export const revalidate = 60;
 
@@ -18,7 +18,6 @@ interface ProductPageProps {
 
 export async function generateMetadata(
   { params }: ProductPageProps,
-  parent?: ResolvingMetadata
 ): Promise<Metadata> {
   const product = await getProduct(params.slug);
 

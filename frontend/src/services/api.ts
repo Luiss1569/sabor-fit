@@ -49,7 +49,7 @@ export async function getApiTopSellingProducts(): Promise<Product[]> {
 
 export async function getApiProductBySlug(slug: string): Promise<Product> {
   const response = await fetch(
-    `${BASE_URL}/produtos/?filters[Slug]=${slug}&populate=*`,
+    `${BASE_URL}/produtos/?filters[slug]=${slug}&populate=*`,
     {
       method: "GET",
       headers,
