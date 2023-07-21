@@ -1,3 +1,4 @@
+import CustomerFeedback from "@/interfaces/customerFeedback";
 import Product from "@interfaces/product";
 
 const STRAPI_TOKEN = process.env.STRAPI_TOKEN;
@@ -42,6 +43,24 @@ export async function getApiTopSellingProducts(): Promise<Product[]> {
       headers,
     }
   ).then((res) => res.json());
+
+  return response.data;
+}
+
+export async function getApiCustomersFeedbacks(): Promise<CustomerFeedback[]> {
+  console.log("STRAPI_URI:", process.env.STRAPI_URI);
+  console.log("STRAPI_TOKEN:",STRAPI_TOKEN)
+  console.log(BASE_URL)
+  console.log(headers)
+  const response = await fetch(
+    `${BASE_URL}/api/customer-feedbacks?populate=*&pagination[limit]=4&sort`,
+    {
+      method: "GET",
+      headers,
+    }
+  ).then((res) => res.json());
+
+  console.log("API Response:", response);
 
   return response.data;
 }
