@@ -1,4 +1,5 @@
 import CustomerFeedback from "@/interfaces/customerFeedback";
+import About from "@/interfaces/about";
 import Product from "@interfaces/product";
 
 
@@ -57,6 +58,27 @@ export async function getApiCustomersFeedbacks(): Promise<CustomerFeedback[]> {
       headers,
     }
   ).then((res) => res.json());
+
+  return response.data;
+}
+
+export async function getApiProductBySlug(slug: string): Promise<Product> {
+  const response = await fetch(
+    `${BASE_URL}/produtos/?filters[slug]=${slug}&populate=*`,
+    {
+      method: "GET",
+      headers,
+    }
+  ).then((res) => res.json());
+
+  return response.data.at(0);
+}
+
+export async function getApiAboutPage(): Promise<About> {
+  const response = await fetch(`${BASE_URL}/page-about`, {
+    method: "GET",
+    headers,
+  }).then((res) => res.json());
 
   return response.data;
 }
