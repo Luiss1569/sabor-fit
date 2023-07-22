@@ -1,8 +1,9 @@
 import CustomerFeedback from "@/interfaces/customerFeedback";
 import Product from "@interfaces/product";
-import {STRAPI_TOKEN, STRAPI_URI} from "@/config/config"
+// import {STRAPI_TOKEN, STRAPI_URI} from "@/config/config"
 
-// const STRAPI_TOKEN = process.env.STRAPI_TOKEN;
+const STRAPI_URI = process.env.STRAPI_URI
+const STRAPI_TOKEN = process.env.STRAPI_TOKEN;
 
 const BASE_URL = STRAPI_URI + "/api" || "http://127.0.0.1:1337/api";
 
@@ -56,8 +57,6 @@ export async function getApiCustomersFeedbacks(): Promise<CustomerFeedback[]> {
       headers,
     }
   ).then((res) => res.json());
-
-  console.log("API Response:", response);
 
   return response.data;
 }
