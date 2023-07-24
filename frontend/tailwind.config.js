@@ -16,6 +16,7 @@ module.exports = {
         "background-testemunhas-tela-grande": "url('../assets/img/BackgroundTestemunhasTelaGrande.svg')",
         "background-pessoa-1": "url('../assets/img/Steve_Jobs.svg')",
         "background-pessoa-2": "url('../assets/img/elon-musk.jpg')",
+        "background-fale-conosco": "url('../assets/img/BackgroundEntrarEmContato.png')",
       },
       fontFamily: {
         sans: ["var(--font-libre)"],

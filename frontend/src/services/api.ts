@@ -2,7 +2,6 @@ import CustomerFeedback from "@/interfaces/customerFeedback";
 import About from "@/interfaces/about";
 import Product from "@interfaces/product";
 
-
 const STRAPI_URI = process.env.STRAPI_URI
 const STRAPI_TOKEN = process.env.STRAPI_TOKEN;
 
