@@ -14,6 +14,9 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "background-testemunhas": "url('../assets/img/BackgroundTestemunhas.svg')",
         "background-testemunhas-tela-grande": "url('../assets/img/BackgroundTestemunhasTelaGrande.svg')",
+        "background-pessoa-1": "url('../assets/img/Steve_Jobs.svg')",
+        "background-pessoa-2": "url('../assets/img/elon-musk.jpg')",
+        "background-fale-conosco": "url('../assets/img/BackgroundEntrarEmContato.png')",
       },
       fontFamily: {
         sans: ["var(--font-libre)"],

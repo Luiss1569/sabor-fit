@@ -1,9 +1,9 @@
 import CustomerFeedback from "@/interfaces/customerFeedback";
 import About from "@/interfaces/about";
 import Product from "@interfaces/product";
+import axios from "axios";
 
-
-const STRAPI_URI = process.env.STRAPI_URI
+const STRAPI_URI = process.env.STRAPI_URI;
 const STRAPI_TOKEN = process.env.STRAPI_TOKEN;
 
 const BASE_URL = STRAPI_URI + "/api" || "http://127.0.0.1:1337/api";
@@ -81,4 +81,31 @@ export async function getApiAboutPage(): Promise<About> {
   }).then((res) => res.json());
 
   return response.data;
+}
+
+export async function saveApiSupport(data: any): Promise<any> {
+  const response = await axios
+    .post(
+      `${BASE_URL}/clients-requests`,
+      data,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          Authorization: `Bearer ${STRAPI_TOKEN}`,
+        },
+      }
+    )
+    .then((res) => {
+      if (res?.data?.error) throw new Error(res.data.error);
+      return res;
+    })
+    .catch((err) => {
+      console.error("Error during POST request STRAPI");
+      throw err;
+    });
+
+  console.log(response);
+
+  return response;
 }

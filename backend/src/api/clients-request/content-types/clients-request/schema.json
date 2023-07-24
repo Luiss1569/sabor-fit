@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients_requests",
+  "info": {
+    "singularName": "clients-request",
+    "pluralName": "clients-requests",
+    "displayName": "Clients Request",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Number": {
+      "type": "string",
+      "required": true
+    },
+    "City": {
+      "type": "string",
+      "required": true
+    },
+    "State": {
+      "type": "string",
+      "required": true
+    },
+    "Subject": {
+      "type": "string",
+      "required": true
+    },
+    "Message": {
+      "type": "text"
+    }
+  }
+}
