@@ -62,6 +62,18 @@ export async function getApiCustomersFeedbacks(): Promise<CustomerFeedback[]> {
   return response.data;
 }
 
+export async function getApiProducts(): Promise<Product[]> {
+  const response = await fetch(
+    `${BASE_URL}/produtos?populate=*`,
+    {
+      method: "GET",
+      headers,
+    }
+  ).then((res) => res.json());
+  
+  return response.data;
+}
+
 export async function getApiProductBySlug(slug: string): Promise<Product> {
   const response = await fetch(
     `${BASE_URL}/produtos/?filters[slug]=${slug}&populate=*`,
@@ -80,6 +92,7 @@ export async function getApiAboutPage(): Promise<About> {
     headers,
   }).then((res) => res.json());
 
+  console.log(response.data)
   return response.data;
 }
 

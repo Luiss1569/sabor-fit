@@ -2,8 +2,6 @@ import CustomerFeedback from "@/interfaces/customerFeedback";
 import { FaQuoteLeft } from "react-icons/fa";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
-const STRAPI_URI = process.env.STRAPI_URI;
-
 interface ItemProps extends React.HTMLAttributes<HTMLDivElement> {
   customerFeedback: CustomerFeedback;
 }
