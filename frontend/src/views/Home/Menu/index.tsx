@@ -11,7 +11,6 @@ async function getRecentProducts() {
 
 async function getTopSellingProducts() {
   const specialties = await getApiTopSellingProducts();
-
   return specialties || [];
 }
 
@@ -20,7 +19,6 @@ export default async function Menu() {
     getRecentProducts(),
     getTopSellingProducts(),
   ]);
-
   return (
     <section className="p-10 flex flex-col justify-center md:items-center relative mt-20 ">
       <Title label="Totalmente Fitness">Menu</Title>
@@ -33,7 +31,7 @@ export default async function Menu() {
             ))}
           </List.Container>
         </div>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center ">
           <h4 className="text-2xl md:text-3xl font-mono mb-5">
             Adicionados recentemente
           </h4>
