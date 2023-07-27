@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Navbar from "@/views/Home/Navbar";
+import Navbar from "@/components/Navbar";
 import { Libre_Franklin, Josefin_Sans, Rancho } from "next/font/google";
-import Footer from "@/views/Home/Footer";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "VibeFit",

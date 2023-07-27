@@ -49,10 +49,10 @@ export default function Navbar() {
                 <Link href="/product">Produtos</Link>
               </li>
               <li>
-                <a href="#contact">Contato</a>
+                <a href="/#contact">Contato</a>
               </li>
               <li>
-                <a href="#about">Quem somos</a>
+                <a href="/#about">Quem somos</a>
               </li>
             </ul>
             <div className="flex gap-4 justify-start w-full">

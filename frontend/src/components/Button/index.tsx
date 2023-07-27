@@ -17,7 +17,7 @@ export default function Button({
 
   return (
     <button
-      className={`font-bold py-4 px-10 rounded ${classes} text-white ${className}`}
+      className={`font-bold py-4 px-10 rounded ${classes} text-white ${className} disabled:opacity-50`}
       {...props}
     >
       {children}

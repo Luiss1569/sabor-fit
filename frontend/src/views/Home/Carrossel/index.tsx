@@ -1,4 +1,4 @@
-import Button from "@components/Button";
+import { Link } from "@components/Button";
 import cmgCarrossel from "@img/carrossel.png";
 import Image from "next/image";
 
@@ -14,7 +14,9 @@ export default function Carrossel() {
           Transforme seu corpo e sua vida com os sabores irresistíveis dos
           nossos pratos.
         </p>
-        <Button variant="secondary">Veja o cardápio</Button>
+        <Link href={"/product"} variant="secondary">
+          Veja o cardápio
+        </Link>
       </div>
       <div className="flex justify-center w-full mt-5 md:mt-0 md:w-2/3 m-auto md:justify-end">
         <Image src={cmgCarrossel} alt="carrossel" />

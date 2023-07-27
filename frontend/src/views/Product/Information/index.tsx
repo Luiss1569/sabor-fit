@@ -59,9 +59,6 @@ export default function Information({ product }: InformationProps) {
               </p>
             </div>
           </div>
-          <Button variant="primary" className="px-4 py-3">
-            <p className="text-sm md:text-md">Ver Mais</p>
-          </Button>
         </div>
       </div>
     </div>

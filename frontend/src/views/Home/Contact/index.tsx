@@ -31,7 +31,10 @@ export default function FaleConosco() {
   );
 
   return (
-    <section className="flex bg-background-fale-conosco bg-no-repeat bg-center bg-cover md:justify-end">
+    <section
+      className="flex bg-background-fale-conosco bg-no-repeat bg-center bg-cover md:justify-end"
+      id="contact"
+    >
       <form
         onSubmit={handleSubmit}
         className="flex flex-col max-w-lg md:self-end gap-6 bg-black/60 px-5 py-5"

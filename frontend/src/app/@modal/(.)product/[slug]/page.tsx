@@ -1,9 +1,17 @@
 import Modal from "@/components/Modal";
-import { getApiProductBySlug } from "@/services/api";
+import { getApiProductBySlug, getApiProducts } from "@/services/api";
 import Information from "@/views/Product/Information";
 import { Metadata, ResolvingMetadata } from "next";
 
 export const revalidate = 60;
+
+export async function generateStaticParams() {
+  const products = await getApiProducts();
+
+  return products.map((product) => ({
+    slug: product.attributes.slug,
+  }));
+}
 
 async function getProduct(slug: string) {
   const product = await getApiProductBySlug(slug);

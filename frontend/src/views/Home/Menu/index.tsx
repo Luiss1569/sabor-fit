@@ -46,7 +46,7 @@ export default async function Menu() {
         <h4 className="text-2xl md:text-3xl font-mono hidden md:inline">
           Veja todos os produtos
         </h4>
-        <Link variant="primary" href={`/products`}>
+        <Link variant="primary" href={`/product`}>
           Ver todos os produtos
         </Link>
       </div>
