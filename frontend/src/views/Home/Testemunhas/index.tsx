@@ -7,9 +7,9 @@ export default async function getCustomerFeedbacks() {
   const customerFeedback = await getApiCustomersFeedbacks();
   data =  customerFeedback || [];
   return(
-    <section>
+    <>
       <ComponentClient data = {data}></ComponentClient>
-    </section>
+    </>
   )
 }
 
