@@ -37,13 +37,17 @@ O Strapi será executado em `http://localhost:1337` e você poderá acessar o pa
    ```
    cd ..
    ```
+2. Navegue para a pasta `backend`:
+```
+   cd frontend
+```
 
-2. Instale as dependências do Next.js:
+3. Instale as dependências do Next.js:
    ```
    npm install
    ```
 
-3. Inicie o servidor de desenvolvimento do Next.js:
+4. Inicie o servidor de desenvolvimento do Next.js:
    ```
    npm run dev
    ```
